@@ -1,67 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      /* Add some fancy CSS styling */
-      form {
-        background-color: lightgray;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 2px 2px 10px #333;
-        text-align: center;
-        animation: form-animation 1s ease-in-out;
-      }
-
-      @keyframes form-animation {
-        from {
-          transform: scale(0.5);
-        }
-        to {
-          transform: scale(1);
-        }
-      }
-
-      input[type="text"],
-      input[type="email"],
-      textarea {
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-        margin-bottom: 20px;
-        width: 80%;
-        box-shadow: 1px 1px 5px #333;
-      }
-      input[type="submit"] {
-        padding: 10px 20px;
-        background-color: green;
-        color: white;
-        border-radius: 5px;
-        border: none;
-        box-shadow: 1px 1px 5px #333;
-        cursor: pointer;
-      }
-
-      /* Add some color and animation to the back button */
-      button.back-button {
-        padding: 10px 20px;
-        background-color: blue;
-        color: white;
-        border-radius: 5px;
-        border: none;
-        box-shadow: 1px 1px 5px #333;
-        cursor: pointer;
-        animation: back-button-animation 1s ease-in-out;
-      }
-
-      @keyframes back-button-animation {
-        from {
-          transform: translateX(-50px);
-        }
-        to {
-          transform: translateX(0);
-        }
-      }
-    </style>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+              'event':'login',
+              'loginMethod':'email'});
+    </script>
   </head>
   <body>
     <!-- Form with input fields for name, email, and message -->
@@ -70,7 +15,7 @@
       <h2>Registration Form</h2>
       <input type="text" placeholder="Your Name" ><br>
       <input type="email" placeholder="Your Email" ><br>
-      <textarea placeholder="Your Message" rows="5" ></textarea><br>
+      <textarea placeholder="Your Message" rows="2" ></textarea><br>
       
 
       <!-- Back button inside the form -->
