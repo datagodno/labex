@@ -1,213 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Product</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-      <!-- style css -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <!-- fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-      <!-- owl stylesheets -->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" rel="stylesheet" />
-   </head>
-   <body>
-      <!-- header section start -->
-      <div class="header_section">
-         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <a class="logo" href="#"><img src="images/logo.png"></a>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="product.html">Product</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                     </li>
-                  </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                     <div class="login_menu">
-                        <ul>
-                           <li><a href="#">Login</a></li>
-                           <li><a href="#"><img src="images/user-icon.png"></a></li>
-                           <li><a href="#"><img src="images/trolly-icon.png"></a></li>
-                           <li><a href="#"><img src="images/search-icon.png"></a></li>
-                        </ul>
-                     </div>
-                  </form>
-               </div>
-            </nav>
-         </div>
-      </div>
-      <!-- header section end -->
-      <!-- product section start -->
-      <div class="product_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <h1 class="product_taital">Products</h1>
-                  <p class="product_text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim</p>
-               </div>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Products Page</title>
+    <style>
+        /* Reset styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;  
+            padding: 0;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #232f3e;
+            color: #fff;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-icons a {
+            margin-right: 20px;
+        }
+
+        .cart-icon img,
+        .account-icon img {
+            height: 30px;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Product styles */
+        .product {
+            background-color: #fff;
+            padding: 30px;
+            margin: 20px;
+            flex-basis: calc(25% - 40px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .product h3 {
+            font-size: 24px;
+            margin: 20px 0 10px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        .product p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .add-to-cart-btn,
+        .buy-now-btn {
+            background-color: #f0c14b;
+            color: #111;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .add-to-cart-btn:hover,
+        .buy-now-btn:hover {
+            background-color: #ddb347;
+        }
+
+        .buy-now-btn {
+            background-color: #ff9900;
+            color: #fff;
+        }
+
+        .buy-now-btn:hover {
+            background-color: #ffbf00;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="https://via.placeholder.com/150x50" alt="Logo">
             </div>
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="owl-carousel owl-theme">
-                     <div class="item">
-                        <div class="image_main"><img src="images/img-2.png" alt="image" /></div>
-                        <h6 class="price_text">Price <br><span style="color: #f75261;">$10</span></h6>
-                     </div>
-                     <div class="item">
-                        <div class="image_main"><img src="images/img-2.png" alt="image" /></div>
-                        <h6 class="price_text">Price <br><span style="color: #f75261;">$10</span></h6>
-                     </div>
-                     <div class="item">
-                        <div class="image_main"><img src="images/img-2.png" alt="image" /></div>
-                        <h6 class="price_text">Price <br><span style="color: #f75261;">$10</span></h6>
-                     </div>
-                     <div class="item">
-                        <div class="image_main"><img src="images/img-2.png" alt="image" /></div>
-                        <h6 class="price_text">Price <br><span style="color: #f75261;">$10</span></h6>
-                     </div>
-                     <div class="item">
-                        <div class="image_main"><img src="images/img-2.png" alt="image" /></div>
-                        <h6 class="price_text">Price <br><span style="color: #f75261;">$10</span></h6>
-                     </div>
-                     <div class="item">
-                        <div class="image_main"><img src="images/img-2.png" alt="image" /></div>
-                        <h6 class="price_text">Price <br><span style="color: #f75261;">$10</span></h6>
-                     </div>
-                     <div class="item">
-                        <div class="image_main"><img src="images/img-2.png" alt="image" /></div>
-                        <h6 class="price_text">Price <br><span style="color: #f75261;">$10</span></h6>
-                     </div>
-                  </div>
-               </div>
+            <div class="header-icons">
+                <a href="#" class="cart-icon">
+                    <img src="https://via.placeholder.com/30x30" alt="Cart Icon">
+                </a>
+                <a href="#" class="account-icon">
+                    <img src="https://via.placeholder.com/30x30" alt="Account Icon">
+                </a>
             </div>
-         </div>
-      </div>
-      <!-- product section start -->
-      <!-- footer section start -->
-      <div class="footer_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-lg-3 col-md-6">
-                  <div class="location_icon">
-                     <ul>
-                        <li><a href="#"><img src="images/map-icon.png"></a></li>
-                        <li><a href="#"><img src="images/mail-icon.png"></a></li>
-                        <li><a href="#"><img src="images/call-icon.png"></a></li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-lg-6 col-md-6">
-                  <div class="mail_box">
-                     <textarea class="enter_email_text" placeholder="Enter Your Email" rows="5" id="comment" name="Message"></textarea>
-                     <div class="subscribe_bt_1"><a href="#">Subscribe</a></div>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-md-6">
-                  <div class="social_icon">
-                     <ul>
-                        <li><a href="#"><img src="images/fb-icon.png"></a></li>
-                        <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-                        <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
-                        <li><a href="#"><img src="images/instagram-icon.png"></a></li>
-                        <li><a href="#"><img src="images/youtub-icon.png"></a></li>
-                     </ul>
-                  </div>
-               </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <h3>Product 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique nulla sit amet felis mollis, vel
+                interdum ipsum iaculis. Fusce in diam in tellus egestas tincidunt. Sed vel augue pharetra, congue enim
+                non, euismod lectus.</p>
+            <div class="buttons">
+                <button class="add-to-cart-btn">Add to Cart</button>
+                <button class="buy-now-btn">Buy Now</button>
             </div>
-            <div class="footer_section_2">
-               <div class="row">
-                  <div class="col-lg-3 col-md-6">
-                     <h3 class="company_text">Product</h3>
-                     <p class="dolor_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.Lorem ipsum dolor sit amet, </p>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                     <h3 class="company_text">Shop</h3>
-                     <p class="dolor_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.Lorem ipsum dolor sit amet, </p>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                     <h3 class="company_text">Company</h3>
-                     <p class="dolor_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.Lorem ipsum dolor sit amet, </p>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                     <h3 class="company_text">MY ACCOUNT</h3>
-                     <p class="dolor_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.Lorem ipsum dolor sit amet, </p>
-                  </div>
-               </div>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <h3>Product 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique nulla sit amet felis mollis, vel
+                interdum ipsum iaculis. Fusce in diam in tellus egestas tincidunt. Sed vel augue pharetra, congue enim
+                non, euismod lectus.</p>
+            <div class="buttons">
+                <button class="add-to-cart-btn">Add to Cart</button>
+                <button class="buy-now-btn">Buy Now</button>
             </div>
-         </div>
-      </div>
-      <!-- footer section end -->
-      <!-- copyright section start -->
-      <div class="copyright_section">
-         <div class="container">
-            <p class="copyright_text">© 2020 All Rights Reserved.<a href="https://html.design"> Free html Templates</a></p>
-         </div>
-      </div>
-      <!-- copyright section end  -->
-      <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
-      <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
-      <!-- javascript --> 
-      <script src="js/owl.carousel.js"></script>
-      <!-- owl carousel -->
-      <script>
-         $('.owl-carousel').owlCarousel({
-         loop:true,
-         margin:30,
-         nav:true,
-         responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:3
-          },
-          1000:{
-              items:4
-          }
-         }
-         })
-      </script>
-   </body>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <h3>Product 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique nulla sit amet felis mollis, vel
+                interdum ipsum iaculis. Fusce in diam in tellus egestas tincidunt. Sed vel augue pharetra, congue enim
+                non, euismod lectus.</p>
+            <div class="buttons">
+                <button class="add-to-cart-btn">Add to Cart</button>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://via.placeholder.com/300x200" alt="Product Image">
+            <h3>Product 4</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate nisi sed venenatis dignissim.
+                Integer eu dolor nibh. Vivamus semper sodales leo, ac convallis sapien. Donec volutpat fringilla eros in
+                ultricies.</p>
+            <div class="buttons">
+                <button class="add-to-cart-btn">Add to Cart</button>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+
 </html>
